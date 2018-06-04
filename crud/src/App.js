@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Formhandler from './components/Formhandler';
 import './App.css';
 
 class App extends Component {
@@ -13,15 +14,6 @@ class App extends Component {
 
   clickHandler(e){
     console.warn(e.target.innerHTML)
-  }
-  
-  changeInputHandler(e){
-    let conteudo = e.target.value
-    console.log(conteudo)
-  }
-  
-  submitHandler(e){
-    alert('Enviou!')
   }
   
   mudarEstado(){
@@ -51,15 +43,7 @@ class App extends Component {
             
           }
           </ul>
-          <form onSubmit={this.submitHandler}>
-            <label htmlFor="inputTest">Escreva para testar!</label>
-            <input 
-              type="text" 
-              name="inputTest" 
-              id="inputTest" 
-              onChange={this.changeInputHandler}
-            />
-          </form>
+          <Formhandler />
           <button onClick={this.mudarEstado}>Click para mudar o estado</button>
       </div>
     );

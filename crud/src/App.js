@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      title: 'React 101'  
+    }
+  }
+
 
   clickHandler(e){
     console.warn(e.target.innerHTML)
@@ -25,6 +32,7 @@ class App extends Component {
     
     return (
       <div className="App">
+          <h1>{ this.state.title }</h1>
           <ul>
           {
             lista.map(item => {
@@ -38,7 +46,12 @@ class App extends Component {
           </ul>
           <form onSubmit={this.submitHandler}>
             <label htmlFor="inputTest">Escreva para testar!</label>
-            <input type="text" name="inputTest" id="inputTest" onChange={this.changeInputHandler}/>
+            <input 
+              type="text" 
+              name="inputTest" 
+              id="inputTest" 
+              onChange={this.changeInputHandler}
+            />
           </form>
       </div>
     );

@@ -1,9 +1,11 @@
-body{
-  margin: 0;
-  padding: 0;
+.App{
+  margin: 25px;
 }
 
 form{
-  margin: 20px;
   padding: 15px;
+}
+
+label{
+  margin-right: 10px;
 }

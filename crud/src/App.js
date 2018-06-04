@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  clickHandler(e){
+    console.warn(e.target.innerHTML)
+  }
+  
   render() {
     const lista = [
         'Item 1',
@@ -12,14 +15,17 @@ class App extends Component {
     
     return (
       <div className="App">
-        <h1>
+          <ul>
           {
             lista.map(item => {
-              return(<div> { item } </div>)
+              return(
+              <li key={ item } onClick={this.clickHandler}> 
+                  { item } 
+              </li> )
             })
             
           }
-        </h1>
+          </ul>
       </div>
     );
   }

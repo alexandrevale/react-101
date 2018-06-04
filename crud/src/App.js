@@ -7,8 +7,9 @@ class App extends Component {
     this.state = {
       title: 'React 101'  
     }
+    
+    this.mudarEstado = this.mudarEstado.bind(this);
   }
-
 
   clickHandler(e){
     console.warn(e.target.innerHTML)
@@ -21,6 +22,12 @@ class App extends Component {
   
   submitHandler(e){
     alert('Enviou!')
+  }
+  
+  mudarEstado(){
+    this.setState({
+      title: 'React 101 - setState'
+    })
   }
   
   render() {
@@ -53,6 +60,7 @@ class App extends Component {
               onChange={this.changeInputHandler}
             />
           </form>
+          <button onClick={this.mudarEstado}>Click para mudar o estado</button>
       </div>
     );
   }

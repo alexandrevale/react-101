@@ -13,16 +13,24 @@ export default class Formhandler extends Component {
   }
 
   render() {
+    const {title, name} = this.props
+    
     return (
-      <form onSubmit={this.submitHandler}>
-        <label htmlFor="inputTest">Escreva para testar!</label>
-        <input 
-          type="text" 
-          name="inputTest" 
-          id="inputTest" 
-          onChange={this.changeInputHandler}
-        />
-      </form>
+      <fragment>
+        <h2> {title} </h2>
+        <p> {name} </p>      
+      
+
+        <form onSubmit={this.submitHandler}>
+          <label htmlFor="inputTest">Escreva para testar!</label>
+          <input 
+            type="text" 
+            name="inputTest" 
+            id="inputTest" 
+            onChange={this.changeInputHandler}
+          />
+        </form>
+      </fragment>
     );
   }
 }

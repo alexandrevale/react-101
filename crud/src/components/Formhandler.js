@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
 
+const defaultProps = {
+  name: 'Nome padrão'
+}
+
 export default class Formhandler extends Component {
 
   changeInputHandler(e){
@@ -34,3 +38,5 @@ export default class Formhandler extends Component {
     );
   }
 }
+
+Formhandler.defaultProps = defaultProps

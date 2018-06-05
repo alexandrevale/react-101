@@ -45,7 +45,6 @@ class App extends Component {
           </ul>
           <Formhandler 
             title="Título Lorem"
-            name="Autor"
           />
           <button onClick={this.mudarEstado}>Click para mudar o estado</button>
       </div>

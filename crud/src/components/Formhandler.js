@@ -17,11 +17,30 @@ export default class Formhandler extends Component {
     alert('Enviou!')
   }
 
+  componentWillMount(){
+    console.warn('Will')
+    
+  }
+  
+  componentDidMount(){
+    console.error('Did')
+  }
+
+  componentWillUpdate(nextProps, nextState){
+    console.warn('WillUpdate')
+    console.log(this.props, this.state, nextProps, nextState)
+  }
+  
+  componentDidUpdate(prevProps, prevState){
+    console.error('DidUpdate')
+    console.log(this.props, this.state, prevProps, prevState)
+  }
+
   render() {
     const {subtitle, name} = this.props
     
     return (
-      <fragment>
+      <React.Fragment>
         <h2> {subtitle} </h2>
         <p> {name} </p>      
       
@@ -35,7 +54,7 @@ export default class Formhandler extends Component {
             onChange={this.changeInputHandler}
           />
         </form>
-      </fragment>
+      </React.Fragment>
     );
   }
 }

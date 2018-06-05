@@ -6,7 +6,9 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      title: 'React 101'  
+      title: 'React 101',  
+      name: 'Nome inicial',
+      subtitle: 'Título inicial'
     }
     
     this.mudarEstado = this.mudarEstado.bind(this);
@@ -18,7 +20,9 @@ class App extends Component {
   
   mudarEstado(){
     this.setState({
-      title: 'React 101 - setState'
+      title: 'React 101 - setState',
+      name: 'Nome atualizado',
+      subtitle: 'Título atualizado'
     })
   }
   
@@ -44,7 +48,9 @@ class App extends Component {
           }
           </ul>
           <Formhandler 
-            title="Título Lorem"
+            subtitle= {this.state.subtitle}
+            name = {this.state.name}
+            onClick = {this.mudarEstado}
           />
           <button onClick={this.mudarEstado}>Click para mudar o estado</button>
       </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 
 const defaultProps = {
+  subtitle: 'Título padrão',
   name: 'Nome padrão'
 }
 
@@ -17,11 +18,11 @@ export default class Formhandler extends Component {
   }
 
   render() {
-    const {title, name} = this.props
+    const {subtitle, name} = this.props
     
     return (
       <fragment>
-        <h2> {title} </h2>
+        <h2> {subtitle} </h2>
         <p> {name} </p>      
       
 

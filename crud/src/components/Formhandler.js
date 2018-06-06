@@ -18,22 +18,22 @@ export default class Formhandler extends Component {
   }
 
   componentWillMount(){
-    console.warn('Will')
+    //console.warn('Will')
     
   }
   
   componentDidMount(){
-    console.error('Did')
+    //console.error('Did')
   }
 
   componentWillUpdate(nextProps, nextState){
-    console.warn('WillUpdate')
-    console.log(this.props, this.state, nextProps, nextState)
+    //console.warn('WillUpdate')
+    //console.log(this.props, this.state, nextProps, nextState)
   }
   
   componentDidUpdate(prevProps, prevState){
-    console.error('DidUpdate')
-    console.log(this.props, this.state, prevProps, prevState)
+    //console.error('DidUpdate')
+    //console.log(this.props, this.state, prevProps, prevState)
   }
 
   render() {

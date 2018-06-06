@@ -81,6 +81,13 @@ class App extends Component {
             <label htmlFor="chk2">defaultChecked</label>
           </fieldset>
           <button onClick={this.mudarEstado}>Click para mudar o estado</button>
+          
+          {
+            this.state.checked
+            ? <p> OK </p>
+            : ''
+          }
+          
       </div>
     );
   }

@@ -9,3 +9,7 @@ form{
 label{
   margin-right: 10px;
 }
+
+fieldset{
+  margin: 15px 0;
+}

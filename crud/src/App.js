@@ -8,10 +8,20 @@ class App extends Component {
     this.state = {
       title: 'React 101',  
       name: 'Nome inicial',
-      subtitle: 'Título inicial'
+      subtitle: 'Título inicial',
+      checked: true
     }
     
     this.mudarEstado = this.mudarEstado.bind(this);
+    
+    this.mudarChecked = this.mudarChecked.bind(this);
+
+  }
+  
+  mudarChecked(){
+    this.setState({
+      checked: !this.state.checked
+    })
   }
 
   clickHandler(e){
@@ -52,6 +62,24 @@ class App extends Component {
             name = {this.state.name}
             onClick = {this.mudarEstado}
           />
+          <fieldset>
+            {/*
+            <input 
+              type="checkbox" 
+              checked={ this.state.checked } 
+              name="chk1"
+             />
+            <label htmlFor="chk1">Checked True</label>
+            */}
+            <input 
+              type="checkbox" 
+              defaultChecked={ this.state.checked } 
+              onChange={this.mudarChecked} 
+              name="chk2"
+              id="chk2"
+            /> 
+            <label htmlFor="chk2">defaultChecked</label>
+          </fieldset>
           <button onClick={this.mudarEstado}>Click para mudar o estado</button>
       </div>
     );

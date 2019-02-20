@@ -6,3 +6,4 @@
 * [Show / Hide Password](https://codesandbox.io/s/ojqmknqzoz)
 * [Toggle](https://codesandbox.io/s/p71noz58vm)
 * [isCollapsed](https://codesandbox.io/s/mjk6lmql0x)
+* [emailInput](https://codesandbox.io/s/ojpxol3y6q)

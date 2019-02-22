@@ -8,3 +8,4 @@
 * [isCollapsed](https://codesandbox.io/s/mjk6lmql0x)
 * [emailInput](https://codesandbox.io/s/ojpxol3y6q)
 * [selectElement](https://codesandbox.io/s/xl2rvzo854)
+* [Tab Component](https://codesandbox.io/s/18j6wp3kr3)

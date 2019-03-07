@@ -5,6 +5,8 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header />
+        <Main />
       </div>
     );
   }

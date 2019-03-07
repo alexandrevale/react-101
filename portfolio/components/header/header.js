@@ -5,12 +5,13 @@ import {
 	NavItem, 
 	Row
 } from 'react-materialize';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <Row>  
     <Navbar className="grey darken-2">
-      <NavItem href='/'>Home</NavItem>
-      <NavItem href='/contact'>Contato</NavItem>
+      <li><NavLink to="/">Home</NavLink></li>
+      <li><NavLink to="contact">Contato</NavLink></li>
     </Navbar>
   </Row>
 );

@@ -4,10 +4,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // Importando o componenet APP
 import App from './App';
+// Importando a lib de rotas
+import { BrowserRouter } from 'react-router-dom'
 // Importando o css
 import './index.css';
 
 // Renderizando o component APP
 const rootElement = document.getElementById("root");
 
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render((  
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+), rootElement);
